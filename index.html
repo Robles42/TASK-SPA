@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestión de Tareas (SPA)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="task-manager-app">
+        <h1>Gestor de Tareas</h1>
+
+        <form id="task-form">
+            <input type="text" id="task-input" placeholder="Escribe una nueva tarea..." required>
+            <button type="submit">Agregar Tarea</button>
+        </form>
+        <div id="task-list-container"></div>
+        <div id="message-container" class="message-container"></div>
+
+        <div class="task-controls">
+            <div id="task-filters">
+                <button class="filter-btn active" data-filter="all">Todas</button>
+                <button class="filter-btn" data-filter="pending">Pendientes</button>
+                <button class="filter-btn" data-filter="completed">Completadas</button>
+            </div>
+            <div class="task-info">
+                <span id="task-counter">0 tareas pendientes</span>
+                <button id="clear-completed-btn" class="clear-btn" title="Limpiar completadas">Limpiar Completadas</button>
+           <button id="delete-all-btn" class="clear-btn" title="Eliminar todas las tareas">Eliminar Todas</button>
+     </div>
+        </div>
+
+        <ul id="task-list">
+            <!-- Las tareas se insertarán aquí dinámicamente -->
+        </ul>
+    </main>
+    
+    <script type="module" src="src/app.js"></script>
+</body>
+</html>

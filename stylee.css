@@ -1,0 +1,112 @@
+:root {
+    --bg-color: #1e1e24;
+    --card-bg: #2a2e37;
+    --text-color: #f0f0f0;
+    --primary-color: #4da6ff;
+    --success-color: #4CAF50;
+    --danger-color: #F44336;
+    --border-radius: 6px;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    margin: 0;
+}
+
+/* Contenedor principal de la SPA */
+.task-manager-app {
+    max-width: 600px;
+    margin: 40px auto;
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+h1, h2 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Formulario de entrada */
+#task-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+#task-input {
+    flex-grow: 1;
+    padding: 12px;
+    border: 1px solid #444;
+    border-radius: var(--border-radius);
+    background-color: #3e4451;
+    color: var(--text-color);
+}
+
+#task-form button {
+    padding: 12px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#task-form button:hover {
+    background-color: #66b5ff;
+}
+
+/* Lista de Tareas */
+#task-list {
+    list-style: none;
+    padding: 0;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    background-color: #3e4451;
+    border-radius: var(--border-radius);
+    border-left: 5px solid var(--primary-color);
+    transition: background-color 0.3s;
+}
+
+.task-item.completed {
+    background-color: #2e343e;
+    border-left-color: var(--success-color);
+    opacity: 0.7;
+}
+
+.task-item-text {
+    flex-grow: 1;
+    padding-right: 15px;
+}
+
+.task-item.completed .task-item-text {
+    text-decoration: line-through;
+    color: #aaa;
+}
+
+.task-actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 1.1em;
+}
+
+.task-actions .complete-btn {
+    color: var(--success-color);
+}
+.task-actions .delete-btn {
+    color: var(--danger-color);
+}
